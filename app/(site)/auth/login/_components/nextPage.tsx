@@ -1,7 +1,18 @@
 import Image from "next/image"
 import Link from "next/link"
+import { useState } from "react";
+import ProfileSetup from "./nextPage1";
 
 export default function WorkspaceSetup() {
+  const [toNextPage, setToNextPage] = useState(false);
+  const handleNext = () => {
+    setToNextPage(true)
+  };
+
+  if (toNextPage) {
+    return <ProfileSetup />;
+  }
+
   return (
     <div className="min-h-screen w-full bg-white px-16 py-8">
       {/* Logo */}
@@ -31,7 +42,7 @@ export default function WorkspaceSetup() {
           />
 
           {/* Next Button */}
-          <button className="rounded-md bg-[#FF6B00] px-6 py-2 text-[15px] font-medium text-white transition-colors hover:bg-[#FF6B00]/90">
+          <button className="rounded-md bg-[#FF6B00] px-6 py-2 text-[15px] font-medium text-white transition-colors hover:bg-[#FF6B00]/90" onClick={handleNext}>
             Next →
           </button>
         </div>
@@ -41,8 +52,8 @@ export default function WorkspaceSetup() {
           <img 
             src="/image.svg" 
             alt="Team chat illustration" 
-            width={500} 
-            height={400}
+            width={400} 
+            height={300}
             className="ml-auto"
           />
         </div>

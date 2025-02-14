@@ -75,14 +75,15 @@ export default function Dashboard() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="flex items-center justify-center border-b p-4">
-        <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-M7sIZGgClSEHKnSRYWngJzXQo1pxlL.png"
-          alt="Opano Logo"
-          width={87}
-          height={24}
-          className="h-6 w-auto"
-        />
+      <header className="flex items-center justify-center">
+        <div className="mb-16">
+          <img 
+            src="/logo.svg" 
+            alt="Pano logo" 
+            width={94} 
+            height={24}
+          />
+        </div>
       </header>
 
       <main className="mx-auto flex w-full max-w-[400px] flex-1 flex-col px-4 py-8">
