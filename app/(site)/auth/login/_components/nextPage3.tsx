@@ -1,18 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react";
-import NextPage1 from "./nextPage1";
-
 export default function NextPage() {
-  const [toNextPage, setToNextPage] = useState(false);
-  const handleNext = () => {
-    setToNextPage(true)
-  };
-
-  if (toNextPage) {
-    return <NextPage1 />;
-  }
-
   return (
     <div className="min-h-screen w-full bg-white">
       <main className="flex-1 container max-w-7xl mx-auto px-4 py-6">
@@ -31,7 +19,7 @@ export default function NextPage() {
         {/* Left Section */}
         <div className="w-[460px]">
           <h1 className="mb-2 text-[32px] font-bold leading-tight text-[#1A1A1A]">
-            What's the name of your company or team?
+            What's your team working on right now?
           </h1>
           <p className="mb-6 text-[15px] text-[#666666]">This will be the name of your Opano workspace.</p>
 
@@ -43,7 +31,7 @@ export default function NextPage() {
           />
 
           {/* Next Button */}
-          <button className="rounded-md bg-[#FF6B00] px-3 py-1 text-[15px] font-meduim text-white transition-colors hover:bg-[#FF6B00]/90" onClick={handleNext}>
+          <button className="rounded-md bg-[#FF6B00] px-3 py-1 text-[15px] font-meduim text-white transition-colors hover:bg-[#FF6B00]/90" >
             Next →
           </button>
         </div>

@@ -12,7 +12,7 @@ import { z } from "zod";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import Cookies from "js-cookie";
-import WorkspaceSetup from "./_components/nextPage";
+import NextPage from "./_components/nextPage";
 
 export default function Dashboard() {
   const [showWorkspace, setShowWorkspace] = useState(false);
@@ -70,7 +70,7 @@ export default function Dashboard() {
   };
 
   if (showWorkspace) {
-    return <WorkspaceSetup />;
+    return <NextPage />;
   }
 
   return (

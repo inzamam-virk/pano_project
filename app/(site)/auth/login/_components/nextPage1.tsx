@@ -3,24 +3,34 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { useState } from "react"
+import NextPage2 from "./nextPage2"
 
-export default function ProfileSetup() {
+export default function NextPage1() {
+  const [toNextPage, setToNextPage] = useState(false);
+    const handleNext = () => {
+      setToNextPage(true)
+    };
+
+  if (toNextPage) {
+    return <NextPage2 />;
+  }
+
   return (
     <div className="min-h-screen flex flex-col">
       {/* Main content */}
       <main className="flex-1 container max-w-7xl mx-auto px-4 py-6">
         {/* Logo */}
-        <div className="mb-16">
-            <img 
+        <div className="mb-16 pl-[15%]">
+          <img 
             src="/logo.svg" 
             alt="Pano logo" 
             width={94} 
             height={24}
-            />
+          />
         </div>
-
         {/* Content grid */}
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="flex">
           {/* Form section */}
           <div className="space-y-8">
             <div className="space-y-2">
@@ -61,7 +71,10 @@ export default function ProfileSetup() {
                 </div>
               </div>
 
-              <Button className="bg-[#FF6B00] hover:bg-[#FF6B00]/90">Next →</Button>
+              {/* Next Button */}
+              <button className="rounded-md bg-[#FF6B00] px-3 py-1 text-[15px] font-meduim text-white transition-colors hover:bg-[#FF6B00]/90" onClick={handleNext}>
+                Next →
+              </button>
             </div>
           </div>
 
@@ -74,27 +87,27 @@ export default function ProfileSetup() {
                 height={300}
                 className="ml-auto"
             />
-            </div>
+          </div>
         </div>
       </main>
 
       {/* Footer */}
-      <footer className="border-t py-4 mt-auto">
-        <div className="container max-w-7xl mx-auto px-4 flex items-center gap-4 text-sm text-muted-foreground">
-          <Link href="#" className="hover:text-foreground">
+      <div className="fixed bottom-0 left-0 w-full border-[#E5E5E5] bg-white py-4">
+        <div className="flex justify-center items-center gap-4 text-[13px] text-[#666666]">
+          <Link href="#" className="hover:text-[#a28b8b]">
             Privacy & Terms
           </Link>
-          <Link href="#" className="hover:text-foreground">
+          <Link href="#" className="hover:text-[#1A1A1A]">
             Contact Us
           </Link>
           <div className="flex items-center gap-1">
-            <Link href="#" className="hover:text-foreground">
+            <Link href="#" className="hover:text-[#1A1A1A]">
               Change region
             </Link>
-            <span>↓</span>
+            <span>↑</span>
           </div>
         </div>
-      </footer>
+      </div>
     </div>
   )
 }
