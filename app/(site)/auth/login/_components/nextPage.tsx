@@ -18,7 +18,7 @@ export default function NextPage() {
       <main className="flex-1 container max-w-7xl mx-auto px-4 py-6">
       {/* Logo */}
       <div className="mb-16 pl-[15%]">
-        <img 
+        <Image 
           src="/logo.svg" 
           alt="Pano logo" 
           width={94} 
@@ -50,7 +50,7 @@ export default function NextPage() {
 
         {/* Right Section - Illustration */}
         <div className="flex-1">
-          <img 
+          <Image 
             src="/image.svg" 
             alt="Team chat illustration" 
             width={400} 

@@ -77,7 +77,7 @@ export default function Dashboard() {
     <div className="flex min-h-screen flex-col">
       <header className="flex items-center justify-center">
         <div className="mb-16">
-          <img 
+          <Image 
             src="/logo.svg" 
             alt="Pano logo" 
             width={94} 

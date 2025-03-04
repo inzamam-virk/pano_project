@@ -1,6 +1,7 @@
 import { Search, Bell, Filter } from "lucide-react"
 import { Sidebar } from "@/components/ui/sidebar"
 import { Card } from "@/components/ui/card"
+import Image from "next/image"
 
 export default function Dashboard() {
   return (
@@ -55,7 +56,7 @@ export default function Dashboard() {
               {Array.from({ length: 5 }).map((_, i) => (
                 <Card key={i} className="overflow-hidden bg-[#FFF5EB] border-[#E5E7EB]">
                   <div className="p-4">
-                    <img
+                    <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-TsKQE3NPnhTvY8mu3QlhsMVNM2iLHP.png"
                       alt="Design illustration"
                       className="w-full h-32 object-contain"
@@ -75,7 +76,7 @@ export default function Dashboard() {
               {Array.from({ length: 4 }).map((_, i) => (
                 <Card key={i} className="overflow-hidden bg-[#FFF5EB] border-[#E5E7EB]">
                   <div className="p-4">
-                    <img
+                    <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-TsKQE3NPnhTvY8mu3QlhsMVNM2iLHP.png"
                       alt="Design illustration"
                       className="w-full h-32 object-contain"

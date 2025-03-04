@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image"
 
 function MessageItem({
   message,
@@ -35,7 +36,7 @@ function MessageItem({
       <div className="grid">
         <div className="flex gap-2.5">
           {renderImageForYou && (
-            <img
+            <Image
               src="https://pagedone.io/asset/uploads/1710412177.png"
               alt="Shanay image"
               className="w-10 h-11"
@@ -90,7 +91,7 @@ function MessageItem({
         </div>
       </div>
       {renderImageForUser && (
-        <img
+        <Image
           src="https://pagedone.io/asset/uploads/1704091591.png"
           alt="Hailey image"
           className="w-10 h-11"

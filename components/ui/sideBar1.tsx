@@ -1,5 +1,6 @@
 import { Search, MessageSquare, Activity, FileText, MoreHorizontal, Hash, Users } from "lucide-react"
 import { ScrollArea } from "./scroll-area"
+import Image from "next/image"
 
 export function Sidebar() {
   return (
@@ -86,7 +87,7 @@ export function Sidebar() {
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground hover:bg-accent hover:text-accent-foreground"
               >
                 <span className="relative flex h-8 w-8 shrink-0 overflow-hidden rounded-full">
-                  <img
+                  <Image
                     className="aspect-square h-full w-full"
                     alt="User avatar"
                     src="/placeholder.svg?height=32&width=32"
@@ -94,7 +95,7 @@ export function Sidebar() {
                 </span>
                 <div className="flex flex-col">
                   <span className="text-sm font-medium leading-none">Cristal Parker</span>
-                  <span className="text-xs text-muted-foreground">That's my reply</span>
+                  <span className="text-xs text-muted-foreground">That s my reply</span>
                 </div>
                 <span className="ml-auto text-xs text-muted-foreground">12/22/21</span>
               </a>
