@@ -92,7 +92,7 @@ function ChatListItem({ chat }: { chat: any }) {
         </div>
         <div>
           <small className="text-xs bg-primary text-white rounded-full h-6 w-6 leading-6 text-center inline-block">
-            23
+            233
           </small>
         </div>
       </div>
